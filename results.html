@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Results</title>
+</head>
+<body>
+    <h1>Validation Results</h1>
+    <h2>Anomalies</h2>
+    <ul>
+        {% for anomaly in results.anomalies %}
+            <li>{{ anomaly }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Missing Values</h2>
+    <ul>
+        {% for key, value in results.missing_values.items() %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Upload another file</a>
+</body>
+</html>
